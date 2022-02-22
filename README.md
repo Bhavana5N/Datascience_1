@@ -30,8 +30,25 @@
   For Symbolic Lasso Regression a new file is created in scala folder which has to be placed in modeling
   Then Execute each model to get ouput
   
-  
+ 
+ 
+ ## Scala Models for AutoMPG
 
 
+      LasoTest9
+      symLassoRegressionTest11
+      regressionTest9
+      QuadraticTest9
+      RidgeRegressionTest9
+      symbolicRegressionTest9
+      symRidgeRegressionTest11
 
+## Scala Models for FoldCPP
+      regressionTest8
+      LasoTest8
+      QuadraticTest8
+      RidgeRegressionTest8
+      symbolicRegressionTest11
+      symRidgeRegressionTest10
+      symLassoRegressionTest10
 

@@ -2,11 +2,17 @@
 
 ## DataSets:
   AirQualityUCI.csv   - Scala Dataset without Time and Date
+  
   AirQualityUCI_1.csv - Python 
+  
   auto-mpg.csv  - Only for Python. For Scala Example AutoMpG Data
+  
   Expedia.csv - Only for Python, In Scala folder a dataset is created
+  
   Foldspp.csv - Both for Python and Scala
+  
   forestfires.csv - Only for Python, In Scala folder a dataset is created
+  
   USA_Housing.csv - Both for Python and Scala
   
   

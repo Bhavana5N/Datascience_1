@@ -64,22 +64,35 @@ symRidgeRegressionTest10
 ## AutoMPG Scala Function Names:
 
 LasoTest9
+
 symLassoRegressionTest11
+
 regressionTest9
+
 QuadraticTest9
+
 RidgeRegressionTest9
+
 symbolicRegressionTest9
+
 symRidgeRegressionTest11
 
 
 ## FoldCPP Scala Function Names:
 
 regressionTest8
+
 LasoTest8
+
 QuadraticTest8
+
 RidgeRegressionTest8
+
 symbolicRegressionTest11
+
 symRidgeRegressionTest10
+
 symLassoRegressionTest10
+
 
 

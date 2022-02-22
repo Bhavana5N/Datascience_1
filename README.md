@@ -33,11 +33,17 @@
   
 ## Air Quality Dataset Scala Function Names:
   Linear Regression:RegressionTest12
+  
   Ridge Regression:RidgeRegressionTest9
+  
   Lasso Regression:lassoRegressionTest1
+  
   Quadratic Regression:QuadraticTest10
+  
   Symbolic Regression: symbolicRegressionTest11
+  
   Symbolic Ridge Regression: symRidgeRegressionTest1
+  
   Symbolic Lasso Regression: symLassoRegressionTest11
 
 

@@ -1,6 +1,6 @@
 # Datascience_1
 
-##DataSets:
+## DataSets:
   AirQualityUCI.csv   - Scala Dataset without Time and Date
   AirQualityUCI_1.csv - Python 
   auto-mpg.csv  - Only for Python. For Scala Example AutoMpG Data
@@ -10,14 +10,14 @@
   USA_Housing.csv - Both for Python and Scala
   
   
-##Python Modules:
+## Python Modules:
 
   For each dataset a jupyter file is created.
   Data has to be taken from Dataset Folder.
   And makesure data folder is present in same folder as Jupyter notebook file
   Execute ipynb file 
   
-##Scala Modules:
+## Scala Modules:
   For each Dataset we have seperate file for each model
   Dataset files has to be placed in data folder in myscalation folder
   Models has to be placed in modeling folder

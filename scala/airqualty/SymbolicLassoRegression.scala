@@ -9,11 +9,14 @@ import scalation.modeling.ImputeMean
 import scala.collection.mutable.ArrayBuffer
 //import scala.collection.mutable._
 
-@main def symRidgeRegressionTest1 (): Unit =
+
+
+@main def symLassoRegressionTest11 (): Unit =
 {
-    import scala.collection.mutable.Set
-    banner ("Air_Quality Symbolic Ridge Regression")
-     val airqual = MatrixD.load("AirQualityUCI.csv",1)
+  import scala.collection.mutable.Set
+
+  banner ("Symbolic Regression")
+    val airqual = MatrixD.load("AirQualityUCI.csv",1)
     println(airqual.dim)
     println(airqual.dim2)
     val n = airqual.dim2 - 1
@@ -39,24 +42,23 @@ import scala.collection.mutable.ArrayBuffer
             //new Plot (airqual(?, i), y)
 
     }
-    airqual.write("test.csv")
     val x_fname= Array ("CO(GT)", "PT08.S1(CO)", "NMHC(GT)", 
                             "C6H6(GT)","PT08.S2(NMHC)","NOx(GT)",
                             "PT08.S3(NOx)","PT08.S4(NO2)","PT08.S5(O3)",
                             "T","RH","AH")
-    val mod = SymRidgeRegression (x, y, x_fname,scala.collection.immutable.Set (1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0), false, true)    // add cross-terms and given powers
+    val mod = SymLassoRegression (x, y, x_fname, scala.collection.immutable.Set (1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0), false, true)                // add x^2 terms
     mod.trainNtest ()()                                                   // train and test the model
     println (mod.summary ())                                              // parameter/coefficient statistics
 
-    for tech <- Predictor.SelectionTech.values do 
+    for tech <- Predictor.SelectionTech.values do
         banner (s"Feature Selection Technique: $tech")
         val (cols, rSq) = mod.selectFeatures (tech)                       // R^2, R^2 bar, R^2 cv
         val k = cols.size
         println (s"k = $k, n = ${x.dim2}")
         new PlotM (null, rSq.transpose, Array ("R^2", "R^2 bar", "R^2 cv"),
-                   s"R^2 vs n for Symbolic Ridge Regression with $tech", lines = true)
+        s"R^2 vs n for  Lasso Regression with $tech", lines = true)
         println (s"$tech: rSq = $rSq")
     end for
     println(mod.report (mod.test ()._2))
 }
-end symRidgeRegressionTest1
+end symLassoRegressionTest11

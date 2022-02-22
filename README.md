@@ -30,25 +30,15 @@
   For Symbolic Lasso Regression a new file is created in scala folder which has to be placed in modeling
   Then Execute each model to get ouput
   
- 
- 
- ## Scala Models for AutoMPG
+  
+## Air Quality Dataset Scala Function Names:
+Linear Regression:RegressionTest12
+Ridge Regression:RidgeRegressionTest9
+Lasso Regression:lassoRegressionTest1
+Quadratic Regression:QuadraticTest10
+Symbolic Regression: symbolicRegressionTest11
+Symbolic Ridge Regression: symRidgeRegressionTest1
+Symbolic Lasso Regression: symLassoRegressionTest11
 
 
-      LasoTest9
-      symLassoRegressionTest11
-      regressionTest9
-      QuadraticTest9
-      RidgeRegressionTest9
-      symbolicRegressionTest9
-      symRidgeRegressionTest11
-
-## Scala Models for FoldCPP
-      regressionTest8
-      LasoTest8
-      QuadraticTest8
-      RidgeRegressionTest8
-      symbolicRegressionTest11
-      symRidgeRegressionTest10
-      symLassoRegressionTest10
 

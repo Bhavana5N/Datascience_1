@@ -20,10 +20,12 @@ import scalation.modeling.Example_AutoMPG.{oxy, x, x_fname, xr_fname, y}
     banner (s"Feature Selection Technique: $tech")
     val (cols, rSq) = mod.selectFeatures (tech)                       // R^2, R^2 bar, R^2 cv
     val k = cols.size
-    println (s"k = $k, n = ${x.dim2}")
+    //println (s"k = $k, n = ${x.dim2}")
     new PlotM (null, rSq.transpose, Array ("R^2", "R^2 bar", "R^2 cv"),
-      s"R^2 vs n for  Lasso Regression with $tech", lines = true)
+      s"R^2 vs n for  Symbolic Lasso Regression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+
+  println (mod.summary ())
 
 end symLassoRegressionTest11

@@ -19,7 +19,7 @@ import scalation.modeling.Example_AutoMPG.{x, x_fname, y}
   banner ("auto_mpg Quadratic Ridge Regression")
   val mod = SymRidgeRegression (x, y, x_fname, scala.collection.immutable.Set (1.0,1.0,1.0, 1.0), false, true)                // add x^2 terms
   mod.trainNtest ()()                                                   // train and test the model
-  println (mod.summary ())                                              // parameter/coefficient statistics
+                                            // parameter/coefficient statistics
 
   for tech <- Predictor.SelectionTech.values do
     banner (s"Feature Selection Technique: $tech")
@@ -30,5 +30,6 @@ import scalation.modeling.Example_AutoMPG.{x, x_fname, y}
       s"R^2 vs n for Symbolic Ridge Regression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+  println (mod.summary ())
 
 end symRidgeRegressionTest11

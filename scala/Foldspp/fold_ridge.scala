@@ -31,7 +31,6 @@ import scala.runtime.ScalaRunTime.stringOf
   println (s"x = $x")
   println (s"y = $y")
 
-  println (mod.summary ())                                           // parameter/coefficient statistics
 
   banner ("Cross-Validation")
   //Fit.showQofStatTable (mod.crossValidate ())
@@ -47,5 +46,8 @@ import scala.runtime.ScalaRunTime.stringOf
       s"R^2 vs n for RidgeRegression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+  println (mod.summary ())
+  println (mod.report (mod.test ()._2))// parameter/coefficient statistics
+
 }
 end RidgeRegressionTest8

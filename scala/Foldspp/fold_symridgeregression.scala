@@ -20,10 +20,9 @@ import scala.runtime.ScalaRunTime.stringOf
 
   val n = vgsales.dim2 - 1
   val (x, y) = (vgsales.not(?, n), vgsales(?, n))
-  banner ("auto_mpg Quadratic Ridge Regression")
+  banner ("auto_mpg Symbolic Ridge Regression")
   val mod = SymRidgeRegression (x, y, x_name, scala.collection.immutable.Set (1.0,1.0,1.0, 1.0), false, true)                // add x^2 terms
   mod.trainNtest ()()                                                   // train and test the model
-  println (mod.summary ())                                              // parameter/coefficient statistics
 
   for tech <- Predictor.SelectionTech.values do
     banner (s"Feature Selection Technique: $tech")
@@ -31,8 +30,10 @@ import scala.runtime.ScalaRunTime.stringOf
     val k = cols.size
     println (s"k = $k, n = ${x.dim2}")
     new PlotM (null, rSq.transpose, Array ("R^2", "R^2 bar", "R^2 cv"),
-      s"R^2 vs n for Quadratic Ridge Regression with $tech", lines = true)
+      s"R^2 vs n for Symbolic Ridge Regression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+  println (mod.summary ())
+
 
 end symRidgeRegressionTest10

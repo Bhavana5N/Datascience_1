@@ -31,6 +31,7 @@ import scala.runtime.ScalaRunTime.stringOf
       s"R^2 vs n for Regression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+  println (mod.summary ())
 
 }
 end regressionTest9

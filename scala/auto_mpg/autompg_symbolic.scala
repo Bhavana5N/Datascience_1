@@ -18,7 +18,7 @@ import scala.runtime.ScalaRunTime.stringOf
 
   val mod = SymbolicRegression (x, y, xr_fname, Set (1,1,1, 1), false, true)   // add, intercept, cross-terms and given powers
   mod.trainNtest ()()                                                  // train and test the model
-  println (mod.summary ())                                             // parameter/coefficient statistics
+                                        // parameter/coefficient statistics
 
   for tech <- Predictor.SelectionTech.values do
     banner (s"Feature Selection Technique: $tech")
@@ -29,5 +29,6 @@ import scala.runtime.ScalaRunTime.stringOf
       s"R^2 vs n for Symbolic Regression with $tech", lines = true)
     println (s"$tech: rSq = $rSq")
   end for
+  println (mod.summary ())
 
 end symbolicRegressionTest9

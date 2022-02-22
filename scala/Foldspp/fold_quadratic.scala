@@ -35,5 +35,17 @@ import scala.runtime.ScalaRunTime.stringOf
   val stats = mod.crossValidate ()
   Fit.showQofStatTable (stats)
 
+  for tech <- Predictor.SelectionTech.values do
+    banner (s"Feature Selection Technique: $tech")
+    val (cols, rSq) = mod.selectFeatures (tech)             // R^2, R^2 bar, R^2 cv
+    val k = cols.size
+    println (s"k = $k, n = ${x.dim2}")
+    new PlotM (null, rSq.transpose, Array ("R^2", "R^2 bar", "R^2 cv"),
+      s"R^2 vs n for Quadratic Regression with $tech", lines = true)
+    println (s"$tech: rSq = $rSq")
+  end for
+
+  println (mod.summary())
+
 }
 end QuadraticTest8

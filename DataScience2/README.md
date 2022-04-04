@@ -22,6 +22,15 @@
   Data has to be taken from Dataset Folder.
   And makesure data folder is present in same folder as Jupyter notebook file
   Execute ipynb file 
+
+## AutoMPG: \python\autompg
+   Neural_autompg_2L
+    Neural Net 2 Layers
+   Neural_autompg_3L
+       Neural Net 2 Layers
+   Neural_autompg_XL
+       Neural Net 2 Layers
+
   
 ## Scala Modules:
   For each Dataset we have seperate file for each model
@@ -63,36 +72,17 @@ symRidgeRegressionTest10
 
 ## AutoMPG Scala Function Names:
 
-LasoTest9
+autompg_neuralnet2L
+runMain scalation.modeling.NeuralNet2L_autom
 
-symLassoRegressionTest11
+autompg_neuralnet3L
+runMain scalation.modeling.NeuralNet3L_autom
 
-regressionTest9
-
-QuadraticTest9
-
-RidgeRegressionTest9
-
-symbolicRegressionTest9
-
-symRidgeRegressionTest11
+autompg_neuralnetXL
+runMain scalation.modeling.NeuralNetXL_autom
 
 
-## FoldCPP Scala Function Names:
 
-regressionTest8
-
-LasoTest8
-
-QuadraticTest8
-
-RidgeRegressionTest8
-
-symbolicRegressionTest11
-
-symRidgeRegressionTest10
-
-symLassoRegressionTest10
 
 
 

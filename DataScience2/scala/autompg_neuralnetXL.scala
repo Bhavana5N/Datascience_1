@@ -39,7 +39,7 @@ import ActivationFun._
     end for
     for f <- f_aff do                                            // try all activation functions for first layer
         banner (s"AutoMPG NeuralNet_XL with ${f.name}")
-        val mod = NeuralNet_XL.rescale (ox, yy, ox_fname, f = Array(f))  // create model with intercept (else pass x) - rescales
+        val mod = NeuralNet_XL.rescale (ox, yy, ox_fname, f = Array(f, f))  // create model with intercept (else pass x) - rescales
         mod.trainNtest2 ()()                                      // train and test the model - with auto-tuning
 
         banner ("AutoMPG Validation Test")

@@ -15,7 +15,8 @@
   
   USA_Housing.csv - Both for Python and Scala
   
-  
+
+
 ## Python Modules:
 
   For each dataset a jupyter file is created.
@@ -39,7 +40,19 @@
   For Symbolic Lasso Regression a new file is created in scala folder which has to be placed in modeling
   Then Execute each model to get ouput
   
-  
+Instructions for running the Scala code.
+
+Copy all the scala codes to the below folder
+'scalation_2.0\src\main\scala\scalation\modeling\neuralnet'
+
+Copy the Expedia.csv file into the below folder
+scalation_2.0\data.
+
+Go to scalation_2.0 in command terminal and follow the below step,
+1) sbt
+2) compile
+3) runMain scalation.modeling."main_class name". 
+   For example, runMain scalation.modeling.NeuralNet3L_Expedia 
 ## Air Quality Dataset Scala Function Names:
 Linear Regression:RegressionTest12
 
@@ -82,7 +95,22 @@ autompg_neuralnetXL
 runMain scalation.modeling.NeuralNetXL_autom
 
 
+## ForestFires Scala Function Names:
 
+runMain scalation.modeling.NeuralNet2L_Forestfires
+
+runMain scalation.modeling.NeuralNet3L_Forestfires
+
+runMain scalation.modeling.NeuralNetXL_Forestfires
+
+## Expedia Scala Function Names:
+
+runMain scalation.modeling.NeuralNet2L_Expedia
+
+runMain scalation.modeling.NeuralNet3L_Expedia
+
+
+runMain scalation.modeling.NeuralNetXL_Expedia
 
 
 

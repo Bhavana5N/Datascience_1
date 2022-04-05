@@ -1,15 +1,11 @@
 # Datascience_1
 
 ## DataSets:
-  AirQualityUCI.csv   - Scala Dataset without Time and Date
-  
-  AirQualityUCI.xlsx - Python 
+  winequality.csv- Both for Python and Scala
   
   auto-mpg.csv  - Only for Python. For Scala Example AutoMpG Data
   
   Expedia.csv - Only for Python, In Scala folder a dataset is created
-  
-  Foldspp.csv - Both for Python and Scala
   
   forestfires.csv - Only for Python, In Scala folder a dataset is created
   
@@ -53,35 +49,25 @@ Go to scalation_2.0 in command terminal and follow the below step,
 2) compile
 3) runMain scalation.modeling."main_class name". 
    For example, runMain scalation.modeling.NeuralNet3L_Expedia 
-## Air Quality Dataset Scala Function Names:
-Linear Regression:RegressionTest12
+## Wine Quality Dataset Scala Function Names:
+Wine_Neural2L
+runMain scalation.modeling.Wine_Neural2L
 
-Ridge Regression:RidgeRegressionTest9
+Wine_Neural3L
+runMain scalation.modeling.Wine_Neural3L
 
-Lasso Regression:lassoRegressionTest1
-
-Quadratic Regression:QuadraticTest10
-
-Symbolic Regression: symbolicRegressionTest11
-
-Symbolic Ridge Regression: symRidgeRegressionTest1
-
-Symbolic Lasso Regression: symLassoRegressionTest11
+WineNeural_XL
+runMain scalation.modeling.WineQuality_XL
 
 ## USA_Housing Scala Function Names:
-LassoRegressionTest100
+Housing_Neural2L
+runMain scalation.modeling.Housing_Neural2L
 
-symLassoRegressionTest10
+Housing_Neural3L
+runMain scalation.modeling.Housing_Neural3L
 
-Linearregression100
-
-QuadraticTest100
-
-RidgeRegressionTest9
-
-symbolicRegressionTest100
-
-symRidgeRegressionTest10
+Housing_NeuralXL
+runMain scalation.modeling.Housing_NeuralXL
 
 ## AutoMPG Scala Function Names:
 

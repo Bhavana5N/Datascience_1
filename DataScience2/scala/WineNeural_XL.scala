@@ -10,21 +10,18 @@ import scala.collection.mutable.{ArrayBuffer, Set}
 import scala.runtime.ScalaRunTime.stringOf
 import java.io.PrintStream
 import java.io.FileOutputStream
-
 import ActivationFun._
 
 
-@main def Wine_Neural2L (): Unit =
+@main def WineQuality_XL (): Unit =
 {
  
 //  println (s"ox = $ox")
 //  println (s"y  = $y")
-
-    System.setOut(new PrintStream(new FileOutputStream("log/Output/nn_2L_WineQuality.txt")))
+//  System.setOut(new PrintStream(new FileOutputStream("log/Output/XL_NN_WineQuality.txt")))
     val yy = MatrixD (y).transpose                               // vector to matrix with 1 column
-
-    banner ("Wine Quality NeuralNet_2L")
-    val mod = NeuralNet_2L.rescale (ox, yy, ox_fname)            // create model with intercept (else pass x) - rescales
+    banner ("Wine Quality NeuralNet_XL")
+    val mod = NeuralNet_XL.rescale (ox, yy, ox_fname)            // create model with intercept (else pass x) - rescales
     mod.trainNtest2 ()()                                         // train and test the model - with auto-tuning
 
     banner ("Cross-Validation")
@@ -41,17 +38,15 @@ import ActivationFun._
                    s"R^2 vs n for ${mod.modelName} with $tech", lines = true)
         println (s"$tech: rSq = $rSq")
     end for
+    //for f <- f_aff do                                            // try all activation functions for first layer
+        //banner (s"Wine Quality NeuralNet_XL with ${f.name}")
+        //val mod = NeuralNet_XL.rescale (ox, yy, ox_fname, f = Array( f ) )  // create model with intercept (else pass x) - rescales
+        //mod.trainNtest2 ()()                                      // train and test the model - with auto-tuning
 
-    for f <- f_aff do                                            // try all activation functions for first layer
-        banner (s"Wine Quality NeuralNet_2L with ${f.name}")
-        val mod = NeuralNet_2L.rescale (ox, yy, ox_fname, f = f)  // create model with intercept (else pass x) - rescales
-        mod.trainNtest2 ()()                                      // train and test the model - with auto-tuning
-
-        banner ("Wine Quality Validation Test")
-        println (Fit.showFitMap (mod.validate ()()))
-    end for
-
+        //banner ("Wine Quality Validation Test")
+        //println (Fit.showFitMap (mod.validate ()()))
+    //end for
 
 }
-end Wine_Neural2L
+end WineQuality_XL
 
